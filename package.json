@@ -7,7 +7,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "npm run clean && nest build",
+    "clean": "rimraf dist",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -25,8 +26,7 @@
     "@nestjs/core": "^7.0.0",
     "@nestjs/platform-express": "^7.0.0",
     "reflect-metadata": "^0.1.13",
-    "rimraf": "^3.0.2",
-    "rxjs": "^6.5.4"
+    "rxjs": "^6.5.5"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.0.0",
@@ -43,6 +43,7 @@
     "eslint-plugin-import": "^2.20.1",
     "jest": "26.0.1",
     "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
     "supertest": "^4.0.2",
     "ts-jest": "26.1.0",
     "ts-loader": "^6.2.1",
