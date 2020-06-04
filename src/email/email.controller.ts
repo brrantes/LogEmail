@@ -7,7 +7,7 @@ import { response } from 'express';
 
 @Controller('email')
 export class EmailController {
-    private logger: Logger;
+    private logger: Logger = new Logger();
 
     constructor(private emailservice: EmailService){}
 
