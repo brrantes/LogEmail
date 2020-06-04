@@ -1547,8 +1547,8 @@
         "affectsGlobalScope": false
       },
       "../src/email/email.controller.ts": {
-        "version": "a758180b32ea635c6a1d72cbea2bccad77b2626e77d3ff40ee42b49ff9c005d4",
-        "signature": "928f53d905cfa6104e2b4d381b8a3599385f0f8b961681aa22b95455358e39f3",
+        "version": "8119447077266714eb2c2f6d8e2cf9415bd08ee76b51d7b36c8369a37fc89718",
+        "signature": "7a14374cf9eadfa62f13f8bf31c699873dfa782143172e022534f1651f4f44de",
         "affectsGlobalScope": false
       },
       "../src/email/schemas/email.schema.ts": {
@@ -1562,7 +1562,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "3785cdade3060826c39c73ab04071a259e0e2f2265adaf8950e831020434d6b5",
+        "version": "44f6815fd85415ef314f081baf0fddae56d8ad053aaa1e86ce15c9430d7cb85a",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -8893,7 +8893,7 @@
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/email/email.controller.ts": [
-        "../src/email/dto/email.dto.ts",
+        "../node_modules/@types/express/index.d.ts",
         "../src/email/email.service.ts",
         "../src/email/interface/email.interface.ts"
       ],

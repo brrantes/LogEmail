@@ -17,7 +17,7 @@ let AppModule = (() => {
     AppModule = AppModule_1 = __decorate([
         common_1.Module({
             imports: [email_module_1.EmailModule, AppModule_1,
-                mongoose_1.MongooseModule.forRoot("mongodb+srv://abarrantes:abarrantes123*@cluster0-36mak.mongodb.net/test?retryWrites=true&w=majority", { useFindAndModify: true, useUnifiedTopology: true })],
+                mongoose_1.MongooseModule.forRoot((process.env.MONGODB_URL || 'mongodb+srv://abarrantes:abarrantes123*@cluster0-36mak.mongodb.net/test?retryWrites=true&w=majority'), { useFindAndModify: true, useUnifiedTopology: true })],
             providers: [],
         })
     ], AppModule);

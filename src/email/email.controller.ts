@@ -1,8 +1,8 @@
-import { Controller, Get, Post, Body, HttpStatus, Logger } from '@nestjs/common';
+import { Controller, Get, Post, Body, HttpStatus, Logger, Res } from '@nestjs/common';
 import { interfaceEmail } from './interface/email.interface'
 import { EmailService } from './email.service';
 import { EmailDTO } from './dto/email.dto';
-import { response } from 'express';
+import { Response } from 'express';
 
 
 @Controller('email')
@@ -18,10 +18,11 @@ export class EmailController {
     
 
     @Post("saveEmail")
-    saveEmail(@Body() emailDTO : any) : any {
+    saveEmail(@Body() emailDTO : any, @Res() res: Response) : any {
        this.logger.log(emailDTO, 'incoming dto');
-      this.emailservice.saveEmail(emailDTO);
-      return response.status(HttpStatus.OK);
+       res.status(HttpStatus.OK).send();
+      //this.emailservice.saveEmail(emailDTO);
+      //return response.status(HttpStatus.OK);
   }
 
 }
