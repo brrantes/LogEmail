@@ -18,8 +18,8 @@ export class EmailController {
     
 
     @Post("saveEmail")
-    saveEmail(@Body() emailDTO : EmailDTO) : any {
-       this.logger.log(`Incoming dto ${emailDTO}`);
+    saveEmail(@Body() emailDTO : any) : any {
+       this.logger.log(emailDTO, 'incoming dto');
       this.emailservice.saveEmail(emailDTO);
       return response.status(HttpStatus.OK);
   }
