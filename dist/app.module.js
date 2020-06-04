@@ -8,16 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
+const email_module_1 = require("./email/email.module");
+const mongoose_1 = require("@nestjs/mongoose");
 let AppModule = (() => {
-    let AppModule = class AppModule {
+    var AppModule_1;
+    let AppModule = AppModule_1 = class AppModule {
     };
-    AppModule = __decorate([
+    AppModule = AppModule_1 = __decorate([
         common_1.Module({
-            imports: [],
-            controllers: [app_controller_1.AppController],
-            providers: [app_service_1.AppService],
+            imports: [email_module_1.EmailModule, AppModule_1,
+                mongoose_1.MongooseModule.forRoot("mongodb+srv://abarrantes:abarrantes123*@cluster0-36mak.mongodb.net/test?retryWrites=true&w=majority", { useFindAndModify: true, useUnifiedTopology: true })],
+            providers: [],
         })
     ], AppModule);
     return AppModule;
